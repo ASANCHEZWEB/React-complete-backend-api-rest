@@ -8,7 +8,7 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
-const cors = require('cors');
+const cors         = require('cors');
 
 // WHEN INTRODUCING USERS DO THIS:
 // INSTALL THESE DEPENDENCIES: passport-local, passport, bcryptjs, express-session
@@ -71,7 +71,7 @@ app.use(passport.session());
 // ADD CORS SETTINGS HERE TO ALLOW CROSS-ORIGIN INTERACTION:
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000'] // <== this will be the URL of our React app (it will be running on port 3000)
+  origin: ['http://localhost:3000'] //esto es para evitar conflicto de url front y back , el back en 5000 y front en 3000.
 }));
 
 
